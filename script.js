@@ -1,11 +1,12 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const path = window.location.pathname.split("/").pop() || "index.html";
-  const links = document.querySelectorAll("nav a");
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll("nav a");
 
-  links.forEach(link => {
-    if (link.getAttribute("href") === path) {
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage || (currentPage === "" && href === "index.html")) {
       link.classList.add("active");
     }
   });
