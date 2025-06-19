@@ -144,5 +144,76 @@ button:hover {
   background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
   box-shadow: 0 6px 12px rgba(0, 195, 255, 0.4);
 }
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg, #fff);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
 
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark, #2b2b2b);
+}
 
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent, #9f7aea);
+  box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.2);
+  outline: none;
+}
+
+.contact-form button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, var(--gradient-start, #6a00f4), var(--gradient-end, #00c3ff));
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, var(--gradient-end, #00c3ff), var(--gradient-start, #6a00f4));
+}
+.contact-number {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(to right, var(--gradient-start, #6a00f4), var(--gradient-end, #00c3ff));
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-number h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-number p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
