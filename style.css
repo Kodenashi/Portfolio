@@ -126,4 +126,23 @@ ul {
 ul li {
   margin-bottom: 0.75rem;
 }
+button {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(106, 0, 244, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+  box-shadow: 0 6px 12px rgba(0, 195, 255, 0.4);
+}
+
 
