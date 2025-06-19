@@ -217,3 +217,19 @@ button:hover {
   letter-spacing: 1px;
   margin: 0;
 }
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, var(--gradient-start, #6a00f4), var(--gradient-end, #00c3ff));
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, var(--gradient-end, #00c3ff), var(--gradient-start, #6a00f4));
+}
+
