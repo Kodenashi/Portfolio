@@ -22,8 +22,6 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
 }
-
-/* Header */
 header,
 header.hero {
   background: url('https://images.pexels.com/photos/8867374/pexels-photo-8867374.jpeg') no-repeat center center/cover;
@@ -93,8 +91,6 @@ header p,
   color: white;
   cursor: pointer;
 }
-
-/* Mobile View */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -119,8 +115,6 @@ header p,
     padding: 15px 0;
   }
 }
-
-/* Sections */
 section {
   padding: 2rem;
   max-width: 960px;
@@ -148,8 +142,6 @@ ul {
 ul li {
   margin-bottom: 0.75rem;
 }
-
-/* Profile Image */
 img.profile,
 .about-preview img {
   width: 150px;
@@ -166,8 +158,6 @@ img.profile,
 img.profile:hover {
   transform: scale(1.05);
 }
-
-/* Buttons */
 .btn,
 button {
   display: inline-block;
@@ -195,8 +185,6 @@ button:hover {
   transform: translateY(-2px);
   background: linear-gradient(to right, var(--gradient-end), var(--gradient-start));
 }
-
-/* Contact Form */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -236,8 +224,6 @@ button:hover {
   background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   color: white;
 }
-
-/* Contact Number Highlight */
 .contact-number {
   text-align: center;
   margin-top: 2rem;
@@ -259,8 +245,6 @@ button:hover {
   letter-spacing: 1px;
   margin: 0;
 }
-
-/* Experience */
 .experience-section {
   max-width: 900px;
   margin: 2rem auto;
@@ -300,16 +284,12 @@ button:hover {
   line-height: 1.6;
   color: var(--text-dark);
 }
-
-/* Call to Action */
 .call-to-action {
   text-align: center;
   padding: 3rem 2rem;
   background: linear-gradient(to right, var(--gradient-end), var(--gradient-start));
   color: white;
 }
-
-/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
