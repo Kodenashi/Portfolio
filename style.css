@@ -327,7 +327,6 @@ button:hover {
   color: var(--text-dark);
 }
 
-/* Call to Action */
 .call-to-action {
   text-align: center;
   padding: 3rem 2rem;
@@ -335,7 +334,6 @@ button:hover {
   color: white;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -343,3 +341,17 @@ footer {
   color: #ccc;
   margin-top: 3rem;
 }
+.toggle-btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  background: none;
+  border: 2px solid white;
+  border-radius: 6px;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
