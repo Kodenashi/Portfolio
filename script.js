@@ -1,16 +1,20 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
-  const path = window.location.pathname;
-  const currentPage = path.substring(path.lastIndexOf("/") + 1) || "index.html";
-  const navLinks = document.querySelectorAll("nav a");
+  const currentPage = location.pathname.split("/").pop() || "index.html";
+  const navLinks = document.querySelectorAll(".nav-links a");
 
   navLinks.forEach(link => {
     const href = link.getAttribute("href");
-
-    // Handle case when hosted under a GitHub Pages subdirectory
-    if (href === currentPage || (currentPage === "index.html" && href === "index.html")) {
+    if (href === currentPage) {
       link.classList.add("active");
     }
   });
+
+  const hamburger = document.getElementById("hamburger");
+  const navList = document.getElementById("navLinks");
+
+  if (hamburger && navList) {
+    hamburger.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  }
 });
