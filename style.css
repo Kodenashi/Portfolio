@@ -23,11 +23,24 @@ body.dark-mode {
   --accent: #6a00f4;
 }
 body {
-  background: var(--light-bg);
-  color: var(--text-dark);
-  line-height: 1.6;
-  scroll-behavior: smooth;
+  background-image: url('https://images.pexels.com/photos/931007/pexels-photo-931007.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
+.section-overlay {
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent white */
+  padding: 2rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  max-width: 1200px;
+  backdrop-filter: blur(6px); /* Optional: adds a glass effect */
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -354,4 +367,3 @@ footer {
 .toggle-btn:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-
