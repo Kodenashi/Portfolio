@@ -14,7 +14,7 @@
     <header class="hero">
         <div class="hero-content">
             <h1>Jancelio Leopoldo</h1>
-            <p>Customer Service Specialist & Aspiring Web Developer</p>
+            <p><span id="typewriter"></span><span class="cursor">|</span></p>
             <a href="contactme.html" class="btn">Contact Me</a>
             <a href="https://kodenashi.github.io/Portfolio/assets/Jancelio_Leopoldo_Resume.pdf" download class="btn">📄 Download My CV</a>
         </div>
@@ -49,7 +49,7 @@
             <h2 style="color: var(--text-dark);">About Me</h2>
             <p style="color: var(--text-dark);">Hello! I'm Jancelio, a service-driven professional with over 3 years of experience in customer support, insurance assistance, and tech troubleshooting. I blend empathy with problem-solving and love learning new skills—especially in web development.</p>
             <div style="text-align: center;">
-            <a href="about.html" class="btn">Learn More</a>
+                <a href="about.html" class="btn">Learn More</a>
             </div>
         </div>
     </section>
@@ -76,7 +76,7 @@
             <p style="color: var(--text-dark);">Helped members understand policies and resolve billing concerns with care and accuracy.</p>
         </div>
         <div style="text-align: center;"><br>
-        <a href="experience.html" class="btn">See Full Experience</a>
+            <a href="experience.html" class="btn">See Full Experience</a>
         </div>
     </section>
 
@@ -92,21 +92,86 @@
         <a href="contactme.html" class="btn">Reach Out</a>
     </section>
     <section style="text-align:center;" class="section-overlay fade-in">
-        <h2 style="color: var(--text-dark);">Here are some of my works</h2>
-        <button type="button" onclick="window.open('https://kodenashi.github.io/dailytracker/', '_blank')">
-            Daily Tracker
-        </button>
-        <button type="button" onclick="window.open('https://kodenashi.github.io/WorldClock/', '_blank')">
-            World Clock
-        </button>
-        <button type="button" onclick="window.open('https://kodenashi.github.io/PC-Build/', '_blank')">
-            My Rig
-        </button>
-    </section>
-    <footer>
-        <p>&copy; 2025 Jancelio Leopoldo. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+        <h1 style="color: var(--text-dark);">I am also an Aspiring Web Developer</h1>
+        <h3 style="color: var(--text-dark);">Here are some of my works:</h2>
+            <button type="button" onclick="window.open('https://kodenashi.github.io/dailytracker/', '_blank')">
+                Daily Tracker
+            </button>
+            <button type="button" onclick="window.open('https://kodenashi.github.io/WorldClock/', '_blank')">
+                World Clock
+            </button>
+            <button type="button" onclick="window.open('https://kodenashi.github.io/PC-Build/', '_blank')">
+                My Rig
+            </button>
+            <section class="section-overlay fade-in" style="text-align:center;">
+                <h2 style="color: var(--text-dark);">🖼️ Project Gallery</h2>
+                <div class="slider-container">
+                    <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <div class="slider">
+                            <div class="slide">
+                                <img src="https://kodenashi.github.io/Portfolio/assets/Dailytracker.png" alt="Daily Tracker" />
+                                <a href="https://kodenashi.github.io/dailytracker/" target="_blank" class="btn">View Daily Tracker</a>
+                            </div>
+                            <div class="slide">
+                                <img src="https://kodenashi.github.io/Portfolio/assets/WorldClock.png" alt="World Clock" />
+                                <a href="https://kodenashi.github.io/WorldClock/" target="_blank" class="btn">View World Clock</a>
+                            </div>
+                            <div class="slide">
+                                <img src="https://kodenashi.github.io/Portfolio/assets/PCBUILD.png" alt="PC Build" />
+                                <a href="https://kodenashi.github.io/PC-Build/" target="_blank" class="btn">View My Rig</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </section>
+            <footer>
+                <p>&copy; 2025 Jancelio Leopoldo. All rights reserved.</p>
+            </footer>
+            <button id="scrollTopBtn" title="Back to top">⬆️</button>
+            <script src="script.js"></script>
+<script>
+  const phrases = [
+    "Customer Service Specialist",
+    "Tech-Savvy Problem Solver",
+    "Aspiring Web Developer"
+  ];
+
+  const typewriter = document.getElementById("typewriter");
+  const cursor = document.querySelector(".cursor");
+  let phraseIndex = 0;
+  let letterIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    const currentText = currentPhrase.substring(0, letterIndex);
+    typewriter.textContent = currentText;
+
+    if (!isDeleting && letterIndex < currentPhrase.length) {
+      letterIndex++;
+      typingSpeed = 100;
+    } else if (isDeleting && letterIndex > 0) {
+      letterIndex--;
+      typingSpeed = 50;
+    } else if (!isDeleting && letterIndex === currentPhrase.length) {
+      isDeleting = true;
+      typingSpeed = 1500;
+    } else if (isDeleting && letterIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      typingSpeed = 300;
+    }
+
+    setTimeout(type, typingSpeed);
+  }
+
+  window.addEventListener("load", type);
+</script>
+
+
 </body>
 
 </html>
