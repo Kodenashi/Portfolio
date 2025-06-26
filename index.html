@@ -126,50 +126,52 @@
                     <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
             </section>
-            <footer>
-                <p>&copy; 2025 Jancelio Leopoldo. All rights reserved.</p>
-            </footer>
-            <button id="scrollTopBtn" title="Back to top">⬆️</button>
-            <script src="script.js"></script>
-<script>
-  const phrases = [
-    "Customer Service Specialist",
-    "Tech-Savvy Problem Solver",
-    "Aspiring Web Developer"
-  ];
+    </section>
+    <footer>
+        <p>&copy; 2025 Jancelio Leopoldo. All rights reserved.</p>
+    </footer>
 
-  const typewriter = document.getElementById("typewriter");
-  const cursor = document.querySelector(".cursor");
-  let phraseIndex = 0;
-  let letterIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 100;
+    <button id="scrollTopBtn" title="Back to top">⬆️</button>
+    <script src="script.js"></script>
+    <script>
+        const phrases = [
+            "Customer Service Specialist",
+            "Tech-Savvy Problem Solver",
+            "Aspiring Web Developer"
+        ];
 
-  function type() {
-    const currentPhrase = phrases[phraseIndex];
-    const currentText = currentPhrase.substring(0, letterIndex);
-    typewriter.textContent = currentText;
+        const typewriter = document.getElementById("typewriter");
+        const cursor = document.querySelector(".cursor");
+        let phraseIndex = 0;
+        let letterIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
 
-    if (!isDeleting && letterIndex < currentPhrase.length) {
-      letterIndex++;
-      typingSpeed = 100;
-    } else if (isDeleting && letterIndex > 0) {
-      letterIndex--;
-      typingSpeed = 50;
-    } else if (!isDeleting && letterIndex === currentPhrase.length) {
-      isDeleting = true;
-      typingSpeed = 1500;
-    } else if (isDeleting && letterIndex === 0) {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      typingSpeed = 300;
-    }
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            const currentText = currentPhrase.substring(0, letterIndex);
+            typewriter.textContent = currentText;
 
-    setTimeout(type, typingSpeed);
-  }
+            if (!isDeleting && letterIndex < currentPhrase.length) {
+                letterIndex++;
+                typingSpeed = 100;
+            } else if (isDeleting && letterIndex > 0) {
+                letterIndex--;
+                typingSpeed = 50;
+            } else if (!isDeleting && letterIndex === currentPhrase.length) {
+                isDeleting = true;
+                typingSpeed = 1500;
+            } else if (isDeleting && letterIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typingSpeed = 300;
+            }
 
-  window.addEventListener("load", type);
-</script>
+            setTimeout(type, typingSpeed);
+        }
+
+        window.addEventListener("load", type);
+    </script>
 
 
 </body>
